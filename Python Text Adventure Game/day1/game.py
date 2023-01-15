@@ -58,6 +58,10 @@ class Villan:
         villan_name.health -= hero_name.swordAD
         print(f"{villan_name.name}'s health is now {villan_name.health}.")
 
+    def villanAttack(villan_name, hero_name):
+        hero_name.health -= villan_name.attack
+        print(f"{hero_name.name}'s health is now {hero_name.health}")
+
 
 lucipurr = Villan("Lucipurr", 40, 20)
 
@@ -92,21 +96,18 @@ def displayInventory(hero_name):
 def combat_menu(lucipurr, hero_name):
     urAlive = True
     shieldPass = False
+    luciFirstStrike = False
     while urAlive:
-        if hero_name.health >= 40:
+        if (lucipurr.health > 0) and (hero_name.health > 0):
             combatchoice = ''
             combatchoice = input("""
         What would you like to do?
             1. Block
             2. Attack
-            3. Heal
+            3. Dodge
+            4. Heal
         """)
             if (combatchoice == '1'):
-                while (shieldPass == True):
-                    print("""
-                    Prepared for Luci, you're able to deflect her blow. You still feel it, though not as much.
-                    """)
-                    break
                 if "Shield" in hero_name.items:
                     print("""
                         You heave your sturdy shield in front of you, just in the knick of time! Lucipurr's outstretched claws make contact with the shield, buying you time to parry.
@@ -114,7 +115,6 @@ def combat_menu(lucipurr, hero_name):
                     hero_name.useItem("Shield")
                     print("Your shield has been destroyed!")
                     shieldPass = True
-                    break
                 else:
                     print("""
                     You throw your arms over your face, but it's all for naught. All 5 of Lucipurr's sharp claws tear into you. YOU DIED.
@@ -184,22 +184,33 @@ def combat_menu(lucipurr, hero_name):
                         lucipurr.villanTakeDamagePunch(hero_name)
                         break
             elif (combatchoice == '3'):
+                if random.random() < .5:
+                    print("""
+                    You dodge and roll, just as Lucipurr's paw swipes past your neck. You hear the "wooshing" sound as it travels.
+                    """)
+                else:
+                    print("""
+                    You sense the attack coming and try to dodge, but it's too little too late.
+                    """)
+                    lucipurr.villanAttack(hero_name)
+            elif (combatchoice == '4'):
                 while (shieldPass == True) and ("Potion" in hero_name.items):
                     print("""
                     You quickly grab the potion that the villargers gave you and bite the cork off. You slam the tiny vile down your throat. Feeling better already!
                     """)
-                    hero_name.usePotion(hero_name)
+                    hero_name.usePotion()
                     break
                 else:
                     print(
                         "You reach into your satchel to grab the potion. Lucipurr takes advantage of your moment of distraction. You've been fillet'd.")
                     urAlive = False
                     break
-        else:
+        if (lucipurr.health == 0):
             print('Lucipurr has been DEFEATED!')
             print('You win')
-            urAlive = False
             break
+        if (hero_name.health == 0):
+            print("You have been defeated!")
 
 
 def player_menu(hero_name):
