@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link  rel="stylesheet" href="./dist/output.css"> 
+    <link  rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<!-- Nav Bar -->
+<nav class="relative container bg-offWhite">     
+    <div class="flex items-center justify-between">
+       <div class="pt-2">
+        <img class= "pawsibilityLogo" src=".\pawsibilityLogo.png" alt="">
+       </div> 
+       <div class="hidden md:flex space-x-6">
+            <a href=".\landingPage.html" class="hover:text-green">Home</a>
+            <a href=".\searchByZip.html" class="hover:text-green">Search Pets</a>
+            <a href=".\searchShelters.html" class="hover:text-green">Find A Shelter</a>
+       </div>
+       <!-- Hamburger Icon -->
+       <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+       </button>
+    </div>
+    <div class="md:hidden">
+        <!-- Hamburger Menu -->
+        <div 
+        id="menu" 
+        class="absolute flex flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+            <a href=".\landingPage.html" class="hover:text-green">Home</a>
+            <a href=".\searchByZip.html" class="hover:text-green">Search Pets</a>
+            <a href=".\searchShelters.html" class="hover:text-green">Find A Shelter</a>
+        </div>
+    </div>
+</nav>
+<div class="aboutHead">
+        <h1 class="aboutHeader">About</h1>
+        <div class="body">
+            <div class="projectInfo">
+                <div class="projHead">
+                    <h3 class="title">This Project</h3>
+                </div>
+                <p class="para">
+                    Pawsibility is a pet finder app that allows you to search adoptable pets and shelters by zipcode. I was inspired to do this because I was in the middle of my own pet search.
+
+                    To make the app, I used HTML, JavaScript, CSS, and Tailwind CSS. I also utilized Postman and of course, the Petfinder API. I learned a lot, including how to use the question mark turnery operator in JavaScript as the Petfinder API was inconsistent in where it stored data like photos. I learned to use the elements section of the developer tools in Chrome to test CSS formatting.
+                    
+                    I decided on the Petfinder API because it seemed to most robust of the options I had. There was a ton of information to use and manipulate on the page. Tailwind was something I really wanted to try because I struggle with CSS. I wanted to make sure the project was a well rounded representation of what I’ve learned since November, so I used a little custom CSS to showcase that as well.
+                </p>
+            </div>
+            <div class="meInfo">
+                <h3 class="title">The Developer</h3>
+                <p class="para">
+                    My name is Jessika Adams and I am a bootcamp student at DigitalCrafts. This is my Week 6 Frontend Project. I'm from Mesa, Arizona and am currently in Coolidge, Arizona with my husband and our own pets. I love coding, reading, writing, jigsaw puzzles, and training my pets. My first experience with code was with HTML way back in the MySpace days. I used to be THE gal for profile customization. I think that's why I found Tailwind easier than CSS. Thanks for stopping by! 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="landingPage.js"></script>
+</html>

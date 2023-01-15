@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link  rel="stylesheet" href="./dist/output.css"> 
+    <link  rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<!-- Nav Bar -->
+    <nav class="relative container bg-offWhite">     
+        <div class="flex items-center justify-between">
+           <div class="pt-2">
+            <img class= "pawsibilityLogo" src=".\pawsibilityLogo.png" alt="">
+           </div> 
+           <div class="hidden md:flex space-x-6">
+                <a href=".\searchByZip.html" class="hover:text-green">Search Pets</a>
+                <a href=".\searchShelters.html" class="hover:text-green">Find A Shelter</a>
+                <a href=".\about.html" class="hover:text-green">About</a>
+           </div>
+           <!-- Hamburger Icon -->
+           <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+           </button>
+        </div>
+        <div class="md:hidden">
+            <!-- Hamburger Menu -->
+            <div 
+            id="menu" 
+            class="absolute flex flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <a href=".\searchByZip.html" class="hover:text-green">Search Pets</a>
+                <a href=".\searchShelters.html" class="hover:text-green">Find A Shelter</a>
+                <a href=".\about.html" class="hover:text-green">About</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- Flex Container -->
+        <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
+            <!-- Left Item -->
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <h1 class="max-w-md text-4xl font-bold text-center text-peach md:text-5xl md:text-left">
+                    We're in the business of best friends
+                </h1>
+                <p class="max-w-sm text-center md:text-left">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat totam corporis aliquid perferendis tempora accusamus rerum inventore, dolores doloremque incidunt iste laborum debitis earum in eaque quam dolore assumenda illo?
+                </p>
+            </div>
+            <!-- Image -->
+            <div class="md:w-1/2"> 
+                <img class="h-96" src=".\cat-hand.jpg" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+<script src="landingPage.js"></script>
+</html>
