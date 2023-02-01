@@ -12,7 +12,8 @@ class Hero:
         hero_name.gold = gold
         hero_name.items = []
 
-    def takeDamage(hero_name):
+    def takeDamage(hero_name, lucipurr):
+        hero_name.health -= lucipurr.attack
         print(f"{hero_name.name}'s health is now {hero_name.health}.")
 
     def swordAttack(hero_name, lucipurr):
@@ -22,6 +23,17 @@ class Hero:
     def punchAttack(hero_name, lucipurr):
         lucipurr.health -= hero_name.punchAD
         print(f"{lucipurr.name}'s health is now {lucipurr.health}")
+
+    def dodge(hero_name, lucipurr):
+        if random.random() < .5:
+            print("""
+            You dodge and roll, just as Lucipurr's paw swipes past your neck. You hear the "wooshing" sound as it travels.
+            """)
+        else:
+            print("""
+            You sense the attack coming and try to dodge, but it's too little too late.
+            """)
+            lucipurr.villanAttack(hero_name)
 
     def addItem(hero_name, itm):
         hero_name.items.append(itm)
@@ -96,7 +108,6 @@ def displayInventory(hero_name):
 def combat_menu(lucipurr, hero_name):
     urAlive = True
     shieldPass = False
-    luciFirstStrike = False
     while urAlive:
         if (lucipurr.health > 0) and (hero_name.health > 0):
             combatchoice = ''
@@ -107,7 +118,7 @@ def combat_menu(lucipurr, hero_name):
             3. Dodge
             4. Heal
         """)
-            if (combatchoice == '1'):
+            if (combatchoice == '1' and shieldPass == False):
                 if "Shield" in hero_name.items:
                     print("""
                         You heave your sturdy shield in front of you, just in the knick of time! Lucipurr's outstretched claws make contact with the shield, buying you time to parry.
@@ -121,42 +132,10 @@ def combat_menu(lucipurr, hero_name):
                     """)
                     urAlive = False
                     break
-                #     shieldPass = input("""
-                #         What would you like to do?
-                #             1. Block
-                #             2. Attack
-                #             3. Heal
-                #     """)
-                #     if shieldPass == '1':
-                #         print("You sense another attack brewing. Forfieting the chance to parry, you throw your arms over your face, but it's all for naught. All 5 of Lucipurr's sharp claws tear into you. YOU DIED.")
-                #         urAlive = False
-                #         break
-                #     if shieldPass == '2':
-                #         if "Sword" in hero_name.items:
-                #             print("Using the brief window your shield created, you lunge forward with a powerful thrust. Lucipurr's eyes widen as the blade makes contact.")
-                #             lucipurr.villanTakeDamageSword(hero_name)
-                #             swordPass = input("""
-                #             What would you like to do?
-                #             1. Block
-                #             2. Attack
-                #             3. Heal
-                #             """)
-                #             if swordPass == '2':
-                #                 if "Sword" in hero_name.items:
-                #                     lucipurr.villanTakeDamageSword(hero_name)
-                #                 else:
-                #                     lucipurr.villanTakeDamagePunch(hero_name)
-                #         else:
-                #             print("Using the brief window your shield created, you lunge forward with a powerful punch. Lucipurr laughs at your arm gains. She's barely been impacted.")
-                #             lucipurr.villanTakeDamagePunch(hero_name)
-                #     if shieldPass == '3':
-
-                #         print("Using the brief window your shield created, you reach into your satchel and pull the potion out that the villagers gave you. You bite the cork out and slam the tiny vile down.")
-                #         hero_name.usePotion()
-                # else:
-                #     print("You throw your arms over your face, but it's all for naught. All 5 of Lucipurr's sharp claws tear into you. YOU DIED.")
-                #     urAlive = False
-                #     break
+            if (combatchoice == '1' and shieldPass == True):
+                print("Your trusty shield was destroyed and all you have to defend yourself is your hands.You throw your arms over your face, but it's all for naught. All 5 of Lucipurr's sharp claws tear into you. YOU DIED.")
+                urAlive = False
+                break
             elif (combatchoice == '2'):
                 if (shieldPass == False) and ("Sword" not in hero_name.items):
                     print("""
@@ -184,15 +163,7 @@ def combat_menu(lucipurr, hero_name):
                         lucipurr.villanTakeDamagePunch(hero_name)
                         break
             elif (combatchoice == '3'):
-                if random.random() < .5:
-                    print("""
-                    You dodge and roll, just as Lucipurr's paw swipes past your neck. You hear the "wooshing" sound as it travels.
-                    """)
-                else:
-                    print("""
-                    You sense the attack coming and try to dodge, but it's too little too late.
-                    """)
-                    lucipurr.villanAttack(hero_name)
+                hero_name.dodge(lucipurr)
             elif (combatchoice == '4'):
                 while (shieldPass == True) and ("Potion" in hero_name.items):
                     print("""
@@ -211,7 +182,7 @@ def combat_menu(lucipurr, hero_name):
             break
         if (hero_name.health == 0):
             print("You have been defeated!")
-
+            
 
 def player_menu(hero_name):
     menuchoice = input("""
