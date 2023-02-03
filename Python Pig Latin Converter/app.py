@@ -19,7 +19,7 @@ Please enter an English word or phrase: """)
         print(newSentence)
     else:
         invalidMenu = input("""
-Invalid entry. Enter 1 to quit or 2 to continue.""")
+Invalid entry. Enter 1 to quit or 2 to continue. """)
         if invalidMenu == "1":
             quit
         elif invalidMenu == "2":
