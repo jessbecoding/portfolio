@@ -1,0 +1,86 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bannerDiv {
+  width: 100%;
+  height: 20rem;
+}
+
+.banner {
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+.aboutContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: auto;
+}
+
+.aboutText {
+  width: 45%;
+  height: auto;
+  margin: 0px 10px 0px;
+}
+
+.slogan {
+  height: 5rem;
+  width: 60%;
+  position: absolute;
+  bottom: -35px;
+  left: 100px;
+  font-size: xx-large;
+  color: var(black);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bannerContainer {
+  position: relative;
+}
+
+.millieContainer {
+  width: 45%;
+  height: 250px;
+  background-color: var(--falcon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.millie {
+  height: 250px;
+  width: auto;
+}
+
+@media (max-width: 650px) {
+  .bannerDiv {
+    width: 100%;
+    height: 7rem;
+  }
+  .banner {
+    height: 5rem;
+  }
+  .slogan {
+    width: 80%;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    font-size: medium;
+  }
+}

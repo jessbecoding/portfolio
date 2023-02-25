@@ -1,0 +1,124 @@
+:root {
+  --toastify-color-success: var(--thunder);
+  --toastify-icon-color-success: var(--cavernPink);
+  --toastify-font-family: "Suranna", serif;
+  --toastify-color-warning: var(--thunder);
+  --toastify-icon-color-warning: var(--cavernPink);
+  --toastify-font-family: "Suranna", serif;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.firstSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thirdSection ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.thirdSection {
+  width: 30vw;
+  border-bottom: 2px var(--thunder) solid;
+  border-top: 2px var(--thunder) solid;
+}
+
+.fourthSection h2 {
+  margin-left: 7px;
+}
+
+.fourthSection h3 {
+  margin-left: 7px;
+}
+
+.fourthSection p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.favButton {
+  height: 3rem;
+  border: none;
+  background-color: var(--viola);
+  color: var(--thunder);
+  font-family: "Gloock", serif;
+  font-size: x-large;
+  margin-bottom: 5px;
+}
+
+.favButton:hover {
+  background-color: var(--thunder);
+  color: var(--cavernPink);
+}
+
+.favButtonOff {
+  height: 3rem;
+  border: none;
+  background-color: var(--scorpion);
+  color: var(--thunder);
+  font-family: "Gloock", serif;
+  font-size: x-large;
+  margin-bottom: 5px;
+}
+
+.petName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerPhoto {
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--thunder);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border-radius: 25px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--falcon);
+  width: 30vw;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.fifthSection {
+  margin-left: 7px;
+}
+
+.fifthSection p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.petName {
+  width: 30vw;
+  border-bottom: 2px var(--thunder) solid;
+}

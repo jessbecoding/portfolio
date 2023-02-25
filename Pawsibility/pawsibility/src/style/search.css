@@ -1,0 +1,93 @@
+:root {
+  --toastify-color-success: var(--thunder);
+  --toastify-icon-color-success: var(--cavernPink);
+  --toastify-font-family: "Suranna", serif;
+  --toastify-color-warning: var(--thunder);
+  --toastify-icon-color-warning: var(--cavernPink);
+  --toastify-font-family: "Suranna", serif;
+}
+
+.zipInput {
+  width: 20%;
+  height: 3rem;
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: larger;
+}
+
+.zipInput:hover {
+  transition: width 0.4s ease-in-out;
+}
+
+.zipInput:focus {
+  width: 25%;
+  outline: none;
+  border-bottom: 2px solid var(--thunder);
+}
+
+.zipDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterDiv {
+  display: flex;
+}
+
+.searchButton {
+  width: 10%;
+  height: 3rem;
+  appearance: none;
+  background-color: var(--cavernPink);
+  color: var(--thunder);
+  font-family: "Gloock", serif;
+  font-size: x-large;
+}
+
+.searchButton:hover {
+  background-color: var(--thunder);
+  color: var(--cavernPink);
+}
+
+.petCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.petCard {
+  border-radius: 25px;
+  background-color: var(--empress);
+  margin: 5px;
+  height: 20rem;
+  width: 15rem;
+  color: black;
+}
+
+.petLinks {
+  color: var(--parchment);
+  text-decoration: none;
+}
+
+.petCard:hover {
+  color: var(--parchment);
+  animation: zoom-in-zoom-out 1s ease;
+}
+
+.petLinks:visited {
+  color: var(--thunder);
+}
+
+.petPhoto {
+  border-radius: 25px 25px 0px 0px;
+  width: 15rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.petNameContainer {
+  display: flex;
+  align-items: center;
+}

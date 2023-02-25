@@ -1,0 +1,58 @@
+.main-footer {
+  position: relative;
+  bottom: 0px;
+  width: 100vw;
+  padding-top: 0;
+  align-items: center;
+  background-color: var(--empress);
+  color: var(--thunder);
+}
+
+hr {
+  height: 1px;
+  background-color: var(--scorpion);
+  border: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row a {
+  text-decoration: none;
+}
+
+.row a:hover {
+  color: var(--parchment);
+}
+
+.row a:visited {
+  color: var(--thunder);
+}
+
+h4 {
+  margin: 15px 0px 5px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col ul {
+  list-style-type: none;
+}
+
+.col a {
+  text-decoration: none;
+}
+
+.col a:hover {
+  color: var(--parchment);
+}
+
+.col a:visited {
+  color: var(--thunder);
+}

@@ -1,0 +1,42 @@
+:root {
+  --toastify-color-success: var(--thunder);
+  --toastify-icon-color-success: var(--cavernPink);
+  --toastify-font-family: "Suranna", serif;
+  --toastify-color-warning: var(--thunder);
+  --toastify-icon-color-warning: var(--cavernPink);
+  --toastify-font-family: "Suranna", serif;
+}
+
+.mainContainerFav {
+  margin-bottom: 50px;
+}
+.petCardContainerFav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.petCardFav {
+  border-radius: 25px;
+  background-color: var(--empress);
+  margin: 5px;
+  height: 20rem;
+  width: 15rem;
+  color: black;
+}
+
+.favoriteButton {
+  width: 100%;
+  height: 4rem;
+  appearance: none;
+  background-color: var(--cavernPink);
+  color: var(--thunder);
+  font-family: "Gloock", serif;
+  font-size: x-large;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.favoriteButton:hover {
+  background-color: var(--thunder);
+  color: var(--cavernPink);
+}

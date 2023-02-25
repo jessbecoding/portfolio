@@ -1,0 +1,32 @@
+:root {
+  --viola: #cc8ca4;
+  --thunder: #2d1d2d;
+  --parchment: #f2e7d9;
+  --scorpion: #6c5c65;
+  --empress: #8b6f7b;
+  --cavernPink: #e4bcc4;
+  --strikemaster: #a46c84;
+  --falcon: #7c5464;
+  font-family: "Belleza", sans-serif;
+}
+
+:root h1 {
+  font-family: "Gloock", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: var(--cavernPink);
+}
+
+.content-wrap {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
