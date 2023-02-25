@@ -1,4 +1,4 @@
-<h1>Pawsibility 2.0</h1>
+<h1>Pawsibility</h1>
 <img src=".\src\assets\logos\Pawsibility.png">
 <h2>About</h2>
 Pawsibility is a pet finder app that allows you to search adoptable pets by zipcode. You can also filter by animal type and distance, as well as add pets to a favorites list. I was inspired to do this because I recently went through this looking for my new puppy, Millie.
